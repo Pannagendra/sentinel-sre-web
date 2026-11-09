@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# 🛡️ Sentinel SRE
 
-First, run the development server:
+### Agentic Incident Investigation & Remediation — Web Platform
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+A multi-agent AI SRE copilot that **detects, investigates, and remediates** production incidents with a human in the loop. This repo is the web experience — dashboard, conversational investigation, integrations, and API surface.
+
+![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+</div>
+
+---
+
+## 🎯 What It Does
+
+Sentinel turns the SRE incident loop into an **agentic workflow**: telemetry comes in, agents triage and investigate autonomously, propose a fix, and act only after a human gate approves.
+
+It's the AI SRE copilot pattern — built to cut MTTR and eliminate L0/L1 toil **without** handing production to a black box. Agents reason; the platform gates, acts, verifies, and audits.
+
+---
+
+## ⚡ Capabilities
+
+| | |
+|---|---|
+| 🔍 **Autonomous Detection** | Agents surface and classify incidents from observability telemetry |
+| 💬 **Intelligent Dialogue** | Conversational investigation — ask the system what's wrong |
+| 🎯 **Surgical Remediation** | Scoped, reversible fixes, not blanket actions |
+| 🕸️ **Multi-Agent Architecture** | Specialised agents coordinate on triage → root cause → fix |
+| 📊 **Live Analytics** | Real-time incident and agent-activity dashboards |
+| 🔌 **40+ Integrations** | Observability, ITSM, and alerting sources |
+| 🧪 **Regression Testing** | Validate agent behaviour before it reaches prod |
+
+---
+
+## 🔌 Built for Enterprise Telemetry
+
+Designed to sit on top of the observability and ITSM stack enterprises already run:
+
+![Dynatrace](https://img.shields.io/badge/Dynatrace-1496FF?style=flat-square&logo=dynatrace&logoColor=white)
+![ServiceNow](https://img.shields.io/badge/ServiceNow-62D84E?style=flat-square&logo=servicenow&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+
+- **Dynatrace** — DQL-driven signal retrieval, multi-cluster entity context, OneAgent topology
+- **ServiceNow** — incident creation, correlation, and suppression; closed-loop ticket lifecycle
+- **Kubernetes / AKS** — workload and cluster-level remediation targets
+
+---
+
+## 🔐 Enterprise-Grade by Design
+
+**Human Gates** (approval before any action) · **RBAC** · **Audit Trail** · **Team Isolation** · **Deploy Anywhere**
+
+This is the part that matters for enterprise adoption: autonomy *with* governance. Agents propose; humans authorise; everything is logged and replayable.
+
+---
+
+## 🧭 Architecture at a Glance
+
+```
+Telemetry (Dynatrace / Prometheus)        ITSM (ServiceNow)
+            │                                    ▲
+            ▼                                    │
+    ┌──────────────┐   ┌───────────────┐   ┌─────┴────────┐
+    │  Detection   │──▶│ Investigation │──▶│ Remediation  │
+    │    Agent     │   │   Agent(s)    │   │    Agent     │
+    └──────────────┘   └───────────────┘   └──────┬───────┘
+            │                  │                  │
+            └──── Live Dashboard · Audit Trail ────┘
+                               │
+                    🧑 Human Gate (approve / reject)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+# open http://localhost:3000
+```
 
-## Learn More
+Pages: `/` landing · `/dashboard` live analytics · `/chat` investigation · `/integrations` · `/api-docs`
 
-To learn more about Next.js, take a look at the following resources:
+**Stack:** `Next.js 16` · `React 19` · `TypeScript` · `Tailwind` · `shadcn/ui`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✍️ More
 
-## Deploy on Vercel
+Architecture deep-dives on **[Medium](https://medium.com/@klpannagendra)** · Connect on **[LinkedIn](https://www.linkedin.com/in/pannagendra-kl-28113055/)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<sub>Built by Panna — Agentic AI Platform Architect · Bangalore, India</sub>
